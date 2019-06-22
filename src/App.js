@@ -60,6 +60,7 @@ class App extends Component {
             <ImgCard
               shuffleImages={this.shuffleImages}
               id={img.id}
+              key={img.id}
               name={img.name}
               image={img.image}
             />
