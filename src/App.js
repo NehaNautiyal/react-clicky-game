@@ -23,19 +23,12 @@ class App extends Component {
 
   shuffleImages = event => {
     let id = parseInt(event.target.id);
-    console.log(id);
-    console.log("id in shuffleImages");
     let pics = this.shuffle(this.state.pics);
     this.setState({ pics }, this.checkScore(id));
   }
 
   checkScore = clickedId => {
-    console.log("checking score");
-    console.log(clickedId);
-    console.log("clickedId in checkScore");
     let clickedArray = this.state.clicked;
-    console.log(clickedArray);
-    console.log(clickedArray.includes(clickedId));
 
     if (clickedArray.includes(clickedId)) {
       alert("Try again!");
@@ -48,15 +41,11 @@ class App extends Component {
       }
     } else {
       this.state.clicked.push(clickedId);
-      console.log(clickedId);
       this.setState({
         clicked: this.state.clicked,
         currentScore: this.state.currentScore + 1
       });
-      console.log(this.state.clicked);
-      console.log("this.state.clicked");
     }
-    console.log(clickedArray);
   }
 
   render() {
