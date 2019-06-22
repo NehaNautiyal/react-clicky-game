@@ -3,9 +3,9 @@ import "./style.css";
 
 function ImgCard(props) {
   return (
-    <div className="card">
+    <div className="card" onClick={props.checkScore}>
       <div className="img-container" onClick={props.shuffleImages}>
-        <img alt={props.name} src={props.image} />
+        <img id={props.id} alt={props.name} src={props.image} />
       </div>
     </div>
   );
