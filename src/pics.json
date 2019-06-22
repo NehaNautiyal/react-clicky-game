@@ -1,0 +1,20 @@
+ [
+    {
+      "id": 1,
+      "name": "Milky Way",
+      "image":
+        "http://www.astronomy.com/-/media/Images/Hidden/MilkyWay/milkyway_15.jpg?mw=600"
+    },
+    {
+      "id": 2,
+      "name": "Another Milky Way",
+      "image":
+        "https://www.amnh.org/var/ezflow_site/storage/images/media/amnh/images/explore/ology-images/features-listing-images/olg_tv_whatdoyouknow_stars-hero/3877498-1-eng-US/olg_tv_whatdoyouknow_stars-hero.jpg"
+    },
+    {
+      "id": 3,
+      "name": "A third Milky Way",
+      "image":
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/M81_wide_Galex.jpg/220px-M81_wide_Galex.jpg"
+    }
+  ]
