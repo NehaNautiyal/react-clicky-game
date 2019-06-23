@@ -30,20 +30,32 @@ class App extends Component {
   checkScore = clickedId => {
     let clickedArray = this.state.clicked;
 
+    if (this.state.currentScore > this.state.topScore) {
+      this.setState({
+        topScore: this.state.currentScore
+      })
+    }
+    
     if (clickedArray.includes(clickedId)) {
       alert("Try again!");
-      if (this.state.currentScore > this.state.topScore) {
         this.setState({
-          topScore: this.state.currentScore,
           currentScore: 0,
           clicked: []
-        });
+        })
       }
-    } else {
+     else {
       this.state.clicked.push(clickedId);
       this.setState({
         clicked: this.state.clicked,
         currentScore: this.state.currentScore + 1
+      });
+    }
+
+    if (this.state.clicked.length === 10) {
+      alert("Congratulations on clicking each picture only once! Can you do it again?");
+      this.setState({
+        clicked: [],
+        currentScore: 0
       });
     }
   }
